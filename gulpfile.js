@@ -59,16 +59,26 @@ gulp.task('check', function(){
         .pipe($.jshint.reporter(require('jshint-stylish')));
  });
 
-gulp.task('serve', function() {
-    var server = $.gls.new('index.js');
-    server.start();
+gulp.task('nodemon', function (cb) {
+    var started = false;
+    return $.nodemon({
+        script: 'index.js'
+    }).on('start', function () {
+        // to avoid nodemon being started multiple times
+        if (!started) {
+            cb();
+            started = true; 
+        } 
+    });
+});
+
+gulp.task('serve', ['nodemon'], function() {
     bsync.init({
         // server: "./dist"
         proxy: "localhost:4000"
     });
     gulp.watch("app/sass/**/*.scss", ['styles']);
     gulp.watch("app/scripts/**/*.js", ['scripts']);
-    gulp.watch("index.js", server.start.apply(server));
 });
 
 gulp.task('build', ['clean'], function () {
