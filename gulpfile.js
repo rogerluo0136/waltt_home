@@ -1,0 +1,79 @@
+var gulp 	= require('gulp');
+var path 	= require('path');
+var bsync 	= require('browser-sync').create();
+var reload 	= bsync.reload;
+var $ 		= require('gulp-load-plugins')({ rename: {
+                    'gulp-minify-css':'cssmin',
+                    'gulp-scss-lint':'scsslint'
+                } });
+
+gulp.task('clean', function () {
+	return gulp.src(['dist', 'tmp'], {read: false})
+		.pipe($.clean());
+});
+
+gulp.task('styles', function () {
+	return gulp.src('app/sass/**/*.scss')
+        .pipe($.plumber())    
+		.pipe($.scsslint())
+		.pipe($.sass())
+        .pipe($.concat('app.css'))
+		.pipe($.cssmin())
+		.pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('scripts', function () {
+    return gulp.src('app/scripts/**/*.js')
+        .pipe($.plumber())
+        .pipe($.jshint())
+        .pipe($.jshint.reporter(require('jshint-stylish')))
+        .pipe($.concat('app.js'))
+        .pipe($.uglify())
+        .pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('images', function () {
+	return gulp.src('app/images/**/*')
+        .pipe($.imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('fonts', function () {
+    return gulp.src('app/**/fonts/**/*.{eot,svg,ttf,woff}')
+        .pipe($.flatten())
+        .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('extras', function () {
+    return gulp.src(['app/*.*', '!app/**/*.jade'], { dot: true })
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('check', function(){
+	return gulp.src('gulpfile.js')
+	    .pipe($.jshint())
+        .pipe($.jshint.reporter(require('jshint-stylish')));
+ });
+
+gulp.task('serve', function() {
+    var server = $.gls.new('index.js');
+    server.start();
+    bsync.init({
+        // server: "./dist"
+        proxy: "localhost:4000"
+    });
+    gulp.watch("app/sass/**/*.scss", ['styles']);
+    gulp.watch("app/scripts/**/*.js", ['scripts']);
+    gulp.watch("index.js", server.start.apply(server));
+});
+
+gulp.task('build', ['clean'], function () {
+    gulp.start('build-full');
+});
+gulp.task('build-full', ['styles', 'scripts', 'images', 'fonts', 'extras']);
+
+gulp.task('default', ['serve']);

@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title!= title
+    //- css : newlines needed for gulp-useref
+    link(rel='stylesheet', href='/assets/app.css')
+
+  body
+    block content
+
+    script(src='/assets/app.js')
+    script(src='/vendor/jquery/dist/jquery.js')
+

@@ -1,0 +1,27 @@
+# Project Name
+
+## Section 1
+actual code snippet
+
+```javascript
+
+var test = 'test';
+
+```
+pseudo code
+<pre>
+treated as plaintext
+</pre>
+
+inline `code` has `ticks` around it
+
+1. First ordered list item
+2. Another item
+  * Unordered sub-list. 
+3. Another item
+  1. Ordered sub-list
+4. Another item
+
+[I'm an inline-style link](https://www.google.com)
+
+![alt text](http://www.flowerpicturegallery.com/d/5298-2/Big+dark+pink+Lotus+Flower+photo.jpg "Logo Title Text 1")

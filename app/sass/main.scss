@@ -1,0 +1,11 @@
+// Main.scss
+// This file is ONLY for imports and variables
+// see additional variables in bootstrap/_variables.scss
+
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+$green:   #008000;
+
+.col-xs-12 {
+  background-color: $green;
+}
