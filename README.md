@@ -1,17 +1,15 @@
-## Hackathon WebDev Setup
-* nodejs: express, serve-static
-* gulp: less, jade, jshint, browsersync
-* minification of css, js, images
-* creation of app and vendor css/js
-* bower.json, package.json
+# Express Jade Seed
+A simple web development setup using the following technologies:
+
+* NodeJS (ExpressJS)
+* Jade Templates (rendered through express)
+* GulpJS (creation of production assets, local development using BrowserSync)
+* Sass 
 
 ## Gulpfile Commands
 
 | Command  		| Output 		|
 | ------------- | ------------- |
-| default  		| runs BrowserSync + watches only changed files (except jade files, which may depend on partials) |
-| build			| cleans dist folder + regenerates everything from scratch |
-| check  		| checks validity of gulpfile using jshint  |
-
-## Tips to be Fast
-* use CDN links rather than bower
+| gulp  		| runs BrowserSync + watches |
+| gulp build			| cleans dist folder + builds project |
+| gulp check  		| checks validity of gulpfile using jshint  |

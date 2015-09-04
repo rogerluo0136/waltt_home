@@ -1,5 +1,5 @@
 {
-  "name": "midnight",
+  "name": "express-jade-seed",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,17 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarcusTan/midnight.git"
+    "url": "https://github.com/MarcusTan/express-jade-seed.git"
   },
   "author": "mt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MarcusTan/midnight/issues"
+    "url": "https://github.com/MarcusTan/express-jade-seed/issues"
   },
-  "homepage": "https://github.com/MarcusTan/midnight",
+  "homepage": "https://github.com/MarcusTan/express-jade-seed",
   "dependencies": {
     "express": "^4.12.3",
-    "gulp-live-server": "0.0.24",
     "jade": "^1.11.0",
     "serve-static": "^1.10.0"
   },
