@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 
 app.use('/vendor', express.static('./bower_components'));
-app.use('/assets', express.static('./dist/assets'));
+app.use('/assets', express.static('./dist'));
 app.set('view engine', 'jade');
 app.set('views', './views');
 
