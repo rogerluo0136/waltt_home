@@ -14,11 +14,15 @@ gulp.task('clean', function () {
         .pipe($.clean());
 });
 
+
 gulp.task('styles', function () {
     return gulp.src('app/sass/**/*.scss')
         .pipe($.plumber())    
         .pipe($.scsslint())
-        .pipe($.sass())
+        .pipe($.sass({
+          includePaths:['./bower_components/bootstrap-sass/assets/stylesheets/'],
+          outputStyle:'compressed'
+        }))
         .pipe($.concat('app.css'))
         .pipe($.cssmin())
         .pipe(gulp.dest('dist'))
@@ -99,6 +103,7 @@ gulp.task('nodemon', function (cb) {
 gulp.task('serve', ['nodemon'], function() {
     bsync.init(null, {
         // server: "./dist"
+        open: false,
         proxy: "localhost:4000",
         reloadDelay: 500
     });
@@ -106,7 +111,7 @@ gulp.task('serve', ['nodemon'], function() {
     gulp.watch("app/scripts/**/*.js", ['appjs']);
     gulp.watch("app/images/**", ['images']);
     gulp.watch("app/fonts/**", ['fonts']);
-    gulp.watch("views/**/*.jade", reload);
+    gulp.watch("views/**/*.pug", reload);
 });
 
 gulp.task('build', ['clean'], function () {
@@ -114,4 +119,6 @@ gulp.task('build', ['clean'], function () {
 });
 gulp.task('build-full', ['styles', 'scripts', 'images', 'fonts', 'extras']);
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['styles', 'appjs', 'images', 'fonts'],function(){
+    gulp.start('serve')
+});
