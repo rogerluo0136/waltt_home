@@ -3,7 +3,7 @@ var path    = require('path');
 var bsync   = require('browser-sync').create();
 var reload  = bsync.reload;
 var $       = require('gulp-load-plugins')({ rename: {
-                    'gulp-minify-css':'cssmin',
+                    'gulp-clean-css':'cssmin',
                     'gulp-scss-lint':'scsslint'
                 } });
 var mainBowerFiles = require('main-bower-files');
@@ -77,7 +77,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('extras', function () {
-    return gulp.src(['app/*.*', '!app/**/*.jade'], { dot: true })
+    return gulp.src(['app/*.*', '!app/**/*.pug'], { dot: true })
         .pipe(gulp.dest('dist'));
 });
 
