@@ -4,7 +4,6 @@ var path = require('path');
 
 app.use('/vendor', express.static('./bower_components'));
 app.use('/assets', express.static('./dist'));
-//app.use(express.static())
 app.set('view engine', 'pug');
 app.set('views', './views');
 

@@ -1,5 +1,5 @@
-# Express Jade Seed
-A simple web development setup using the following technologies:
+# Waltt Group Home Page
+Based on Marcus Tan's Express Jade Seed. A simple web development setup using the following technologies:
 
 * NodeJS (ExpressJS)
 * Jade Templates (rendered through express)
