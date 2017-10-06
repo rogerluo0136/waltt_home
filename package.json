@@ -10,10 +10,14 @@
     "type": "git",
     "url": ""
   },
-  "author": "mt, james",
+  "author": "roger,mt, james",
   "license": "ISC",
   "dependencies": {
-    "express": "4.15.2"
+    "bootstrap-sass": "^3.3.7",
+    "express": "4.15.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
+    "scsslint": "0.0.3"
   },
   "devDependencies": {
     "browser-sync": "2.18.8",

@@ -29,6 +29,7 @@ gulp.task('styles', function () {
         .pipe(reload({stream:true}));
 });
 
+
 gulp.task('vendorjs', function(){
     var jsfilter = $.filter('**/*.js');
     var bower = gulp.src(mainBowerFiles())
