@@ -1,4 +1,63 @@
 @import 'bs';
 @import 'homepage';
+@import 'variables';
 
 
+//== classes to be extended by other classes
+
+%strip {
+	//position: absolute;
+  width: 100%;
+  left: 0;
+  display: block;
+
+}
+
+//== header classes
+
+.banner {
+	@extend %strip;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	
+	&.low {
+	  background-color: $nav-base;
+	  padding: 0;
+
+	}
+}
+
+#nav-strip {
+  margin-bottom: 0;
+}
+
+#menu{
+	color: $nav-text;
+	font-size: 1.3em;
+	&:hover, &:focus {
+	  color: $nav-text-hover;
+	}
+}
+
+//== body classes
+
+.banner-image-home {
+	/* The image used */
+    background-image: url("images/banner-home.jpg");
+
+    /* Set a specific height */
+    height: 835px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//== footer classes
+
+
+footer {
+	
+}
