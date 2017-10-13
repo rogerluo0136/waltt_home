@@ -6,25 +6,33 @@
 //== classes to be extended by other classes
 
 %strip {
-	//position: absolute;
+//position: absolute;
   width: 100%;
   left: 0;
   display: block;
 
 }
 
+%parallax {
+   /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 //== header classes
 
 .banner {
-	@extend %strip;
-	padding-top: 30px;
-	padding-bottom: 20px;
-	
-	&.low {
-	  background-color: $nav-base;
-	  padding: 0;
-
-	}
+  @extend %strip;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  
+  &.low {
+    background-color: $nav-base;
+    padding: 0;  
+    height: 100%;
+  }
 }
 
 #nav-strip {
@@ -32,32 +40,97 @@
 }
 
 #menu{
-	color: $nav-text;
-	font-size: 1.3em;
-	&:hover, &:focus {
-	  color: $nav-text-hover;
-	}
+  color: $nav-text;
+  font-size: 1.3em;
+  &:hover, &:focus {
+    color: $nav-text-hover;
+  }
+}
+
+#header-box {
+  padding: 0;
+  margin: 0;
+  background-color: $nav-text;
+}
+
+#header-text{
+  margin-top: 10%;
+  text-indent: 18px;
+  font-size: 3em;
 }
 
 //== body classes
 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-directiohn: column;
+  height: 100vh;	
+}
+
+.body-page {
+ // margin-top: 14%;
+}
+
 .banner-image-home {
+  @extend %parallax;	
 	/* The image used */
-    background-image: url("images/banner-home.jpg");
+  background-image: url("images/banner-home.jpg");
 
     /* Set a specific height */
-    height: 835px; 
+  //height: 835px;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  margin-bottom: 10px; 
+
+
+  h1 {
+    color: $header-base;
+    text-align: center;
+    font-size: 5.5em;
+    display: block;
+    padding-top: 16%;
+    padding-bottom: 16%;
+    text-indent: -5%;
+    text-transform: uppercase;
+
+    .slogan {
+      text-indent: 15%;
+      display: block;
+    }
+  }
+
+}
+
+.content {
+  flex: 1 0 auto;
+  padding: 0;
+}
+
+.header-home-black {
+  font-size: 4.5em;
+  margin: 30px auto 50px auto;
 }
 
 //== footer classes
 
 
-footer {
-	
+.footer {
+  flex-shrink: 0;
+  padding: 20px;
 }
+
+#footer-up {
+  font-size: 1.75em;
+  height: 15%;
+  margin-top: 20px;
+  
+  .row {
+    padding-top: 25px;
+  }
+}
+
+
+

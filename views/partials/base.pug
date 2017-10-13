@@ -6,45 +6,50 @@ html
 
     link(rel='stylesheet', href='/assets/app.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', crossorigin='anonymous')
+    link(rel='stylesheet', href='app/font-awesome/css/font-awesome.min.css')
 
  
 
   body
+   .content
+    .navbar.navbar-fixed-top#header-box
+     .banner
+      .container
+       nav.navbar.navbar-expand-lg.navbar-light
+        a.navbar-brand(href='#')
+         img.d-inline-block.align-top.float-left(src='assets/images/logo.png',width='105',heigh='80' alt='waltt_logo') 
+         h1.inline-block#header-text= 'Waltt Group'
+     .banner.low
+      .container 
+       nav.navbar.navbar-expand-lg.navbar-light#nav-strip
+        .collapse.navbar-collapse
+         .navbar-nav
+          a.nav-item.nav-link#menu(href='#') Home
+          a.nav-item.nav-link#menu(href='#') About
+          a.nav-item.nav-link#menu(href='#') Projects
+          a.nav-item.nav-link#menu(href='#') Partners
+          a.nav-item.nav-link#menu(href='#') News
+          a.nav-item.nav-link#menu(href='#') Contact 
 
-   .banner
-    .container
-     nav.navbar.navbar-expand-lg.navbar-light
-      a.navbar-brand(href='#')
-       img.d-inline-block.align-top.float-left(src='assets/images/logo.png',width='105',heigh='80' alt='waltt') 
-       h1.inline-block= 'Waltt Group'
-   .banner.low
-    .container 
-     nav.navbar.navbar-expand-lg.navbar-light#nav-strip
-      .collapse.navbar-collapse
-       .navbar-nav
-        a.nav-item.nav-link#menu(href='#') Home
-        a.nav-item.nav-link#menu(href='#') About
-        a.nav-item.nav-link#menu(href='#') Projects
-        a.nav-item.nav-link#menu(href='#') Partners
-        a.nav-item.nav-link#menu(href='#') News
-        a.nav-item.nav-link#menu(href='#') Contact
+    .body-page
+     block content 
 
    
-   block content
-
-  
-   footer.footer.navbar.navbar-default.bg-light
-    .container
-     .row
-      .col-md-4
-       p='in'
-      .col-md-4 
-       p='info@waltt.ca 905-875-9851'
-      .col-md-4
-       p='28 Fulton Way, Unit 200 Richmond Hill, L4B 1J5 Canada'
-   .footer.bg-dark
-    .container 
-       p='©2017 by Waltt Group.'
+    footer.footer.bg-light#footer-up
+     .container
+      .row
+       .col-md-4
+        p.text-center='in'
+       .col-md-4 
+        p.text-center='info@waltt.ca 905-875-9851'
+       .col-md-4
+        p.text-center='28 Fulton Way, Unit 200' 
+        p.text-center='Richmond Hill, L4B 1J5 Canada'
+    .footer.bg-dark 
+     .container
+      .row
+       .col-md-12.text-center
+        p.text-light='©2017 by Waltt Group.'
 
 
    script(src='/assets/vendor.js')

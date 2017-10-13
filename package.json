@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "browser-sync": "2.18.8",
+    "font-awesome": "^4.7.0",
     "gulp": "3.9.1",
     "gulp-changed": "2.0.0",
     "gulp-clean": "0.3.2",

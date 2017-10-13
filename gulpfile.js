@@ -123,3 +123,4 @@ gulp.task('build-full', ['styles', 'scripts', 'images', 'fonts', 'extras']);
 gulp.task('default', ['styles', 'appjs', 'images', 'fonts'],function(){
     gulp.start('serve')
 });
+
