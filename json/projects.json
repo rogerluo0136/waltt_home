@@ -1,0 +1,26 @@
+[
+  {
+  	"file": "contessa.jpg",
+  	"name": "Contessa",
+  	"desc": "Two six storey concrete buildings reflect the subtle curve of Cambie street as it traces the outline of Queen Elizabeth Park. with studio 1, 2 and 3 bedroom homes ranging from 377 — 1884 sq. ft. and 1500 sq. ft., and 3 bedroom townhomes ranging from 1496 — 1507 sq. ft., Contessa offers the most complete range of home ownership opportunities on the highly desirable Cambie corridor."
+  },
+
+  {
+  	"file": "winery.jpg",
+  	"name": "Mt. Boucherie",
+  	"desc": "As one of British Columbia’s premier wineries, Mt. Boucherie offers a full portfolio of varietal wines and small lots reserve vintages, sourced from our estate vineyards in the Okanagan Valley, Golden Mile Bench and Similkameen Valley."
+  },
+
+  {
+  	"file": "bradford.jpg",
+  	"name": "Bradford",
+  	"desc": "We have a new project located at Bradford currently under subdivision."
+  },
+
+  {
+  	"file": "innisfil.jpg",
+  	"name": "Innisfil",
+  	"desc": "We have a new project located at Innisfil currently under subdivision."
+  }
+
+]

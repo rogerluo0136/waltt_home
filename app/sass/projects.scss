@@ -1,0 +1,23 @@
+@import 'bs';
+@import 'homepage';
+@import 'variables';
+@import 'main';
+@import 'about';
+
+.banner-projects {
+  @extend .banner-about;
+
+  background-image: url('images/projects-banner.jpg');
+}
+
+.project-box {
+  margin-top: 15px;
+  p {
+    font-size: 1.7em;
+    padding-top: 20px;
+  }
+
+  img {
+    width:100%;
+  }
+}

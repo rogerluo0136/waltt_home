@@ -1,0 +1,67 @@
+@import 'bs';
+@import 'homepage';
+@import 'variables';
+@import 'main';
+
+.wrap {
+  width: 100%;
+  height: 340px;
+  position: relative;	
+}
+
+.banner-about {
+  @extend %parallax;
+  background-image: url('images/about-us.jpg');
+  height: 400px;
+  position: relative;
+  margin-bottom: 40px;
+  
+  .banner-text {
+    width: 60%;
+    margin: auto;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  h1 {
+    font-size: 4.7em;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+
+.box-about {
+  background-color: $box-about;
+  margin-top: 20px;
+  width: 80%;
+  margin-bottom: 40px;
+
+
+  img {
+    margin-top: -15px;
+    width: 90%;  
+    margin-bottom: 20px; 
+  }
+
+  h2{
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+}
+
+.box-about-right {
+  @extend .box-about;
+
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+
+
+}

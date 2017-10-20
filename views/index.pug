@@ -64,15 +64,18 @@ block content
   .back-image-home-partner
    .container.text-center
     h1= 'OUR PARTNERS'
-   .row
-    .col-md-4.col-sm-12
-     img(src='assets/images/magnum-logo.png')
-     h2= 'magum projects'
-    .col-md-4.col-sm-12
-     img(src='assets/images/pure-west-logo.png')
-     h2= 'Pure West'
-    .col-md-4.col-sm-12
-     img(src='assets/images/Weston-Brand-logo.jpg')
-     h2= 'Weston Consulting'
+    .row
+     .project-box.text-center
+      .col-md-4.col-sm-12.partner
+       img(src='assets/images/magnum-logo.png')
+       h2.partner-name= 'Magum Projects'
+      .col-md-4.col-sm-12.partner
+       img(src='assets/images/pure-west-logo.png')
+       h2.partner-name= 'Pure West'
+      .col-md-4.col-sm-12.partner
+       img(src='assets/images/Weston-Brand-logo.jpg')
+       h2.partner-name= 'Weston Consulting'
+    button.btn.btn-dark.btn-lg.text-uppercase#btn-home-partner
+     |View All
 
  

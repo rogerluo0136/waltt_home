@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var projects = require('./json/projects');
 
 app.use('/vendor', express.static('./bower_components'));
 app.use('/assets', express.static('./dist'));
@@ -8,22 +9,18 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Home'});
-});
-
-app.get('/team', function (req, res) {
-  res.render('team', { title: 'blah' });
+    res.render('index', { title: 'Waltt|Home'});
 });
 
 app.get('/about', function (req,res){
-	res.send('about page');
+	res.render('about', { title: 'Waltt|About'});
 });
 
 app.get('/projects', function (req,res){
-	res.send('projects page');
+	res.render('projects', {title: 'Waltt|Projects', projects: projects});
 });
 
-app.get('/partner', function (req,res){
+app.get('/partners', function (req,res){
 	res.send('partner page');
 });
 

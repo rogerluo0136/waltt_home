@@ -25,8 +25,20 @@
 
 #btn-home-service {
   border-radius: 0;
-  padding: 10px 30px;
+  padding: 18px 50px;
   margin-bottom: 40px;
+  font-size: 1.8em;
+
+  &:hover {
+    background-color: $home-icon;
+  }
+}
+
+#btn-home-partner {
+  @extend #btn-home-service;
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 50px;
 }
 
 //== header classes
@@ -160,6 +172,7 @@ body {
   width: 80%;
   margin: 0 auto 40px;
 
+
   img {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -169,11 +182,30 @@ body {
 .back-image-home-partner {
   @extend .back-image-home-story;
   background-image: none;
-  background-color: black;
+  background-color: $home-partner-back;
 
   img {
-    width: 35%;
+    display: block;
+    margin: auto;
+    width: 90%;
   }
+
+  .project-box {
+    margin-top: 40px;
+  }
+
+}
+
+.partner {
+  height: 150px;
+  position: relative;
+}
+
+.partner-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-right: 10%;
 }
 
 //== footer classes
