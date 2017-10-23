@@ -1,0 +1,30 @@
+[
+  {
+  	"file": "news1.jpg",
+  	"title": "Buyers regain confidence as Toronto real estate market rebounds from summer sales slump",
+  	"date": "october 22, 2017",
+    "link": "http://www.cbc.ca/news/canada/toronto/toronto-real-estate-mortage-rules-1.4366545"
+  },
+
+  {
+  	"file": "news2.jpg",
+  	"title": "4 Stats Show Toronto Housing Hasn't Been Affected By Interest Hikes... Yet",
+    "date": "october 19, 2017",
+  	"link": "http://www.huffingtonpost.ca/madaline-zannes/4-stats-show-toronto-housing-hasnt-been-affected-by-interest-hikes-yet_a_23240379/?utm_hp_ref=ca-blogs"
+  },
+
+  {
+  	"file": "news3.jpg",
+  	"title": "Toronto housing price ‘correction’ eases: Report",
+  	"date": "october 12, 2017",
+    "link": "https://www.thestar.com/business/real_estate/2017/10/12/toronto-housing-price-correction-eases-report.html"
+  },
+
+  {
+  	"file": "news4.jpg",
+  	"title": "ONTARIO REALTORS FACE NEW DOUBLE-ENDING RULES, STIFFER FINES",
+  	"date": "october 5, 2017",
+    "link": "https://www.thestar.com/business/real_estate/2017/10/05/ontario-realtors-face-new-double-ending-rules-stiffer-fines.html"
+  }
+
+]

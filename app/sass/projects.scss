@@ -12,12 +12,46 @@
 
 .project-box {
   margin-top: 15px;
+  
+  h2 {
+    text-transform: uppercase;
+  }
+
   p {
     font-size: 1.7em;
     padding-top: 20px;
   }
 
   img {
-    width:100%;
+    width: 100%;
+  }
+}
+
+.banner-partners {
+  @extend .banner-about;
+
+  background-image: url('images/banner-partners.jpg');
+}
+
+.partner-container {
+  background-color: $home-partner-back;
+  color: #fff;
+  padding-bottom: 30px;
+
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
+.news-box {
+  @extend .project-box;
+  text-transform: uppercase;
+
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.7em;
+    align: bottom;
   }
 }

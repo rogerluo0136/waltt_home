@@ -1,0 +1,18 @@
+extends ./partials/base.pug
+
+block content
+
+ .container
+   each nes in news
+    .row
+     .news-box
+      .col-md-6.col-sm-12
+       h1
+        |#{nes.title}
+       p
+        |#{nes.date}
+       a(href=nes.link, target='_blank')
+        |read more
+      .col-md-6.col-sm-12
+       a(href=nes.link, target='_blank')
+        img(src='assets/images/'+nes.file)

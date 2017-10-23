@@ -1,7 +1,12 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var favicon = require('serve-favicon')
 var projects = require('./json/projects');
+var partners = require('./json/partners');
+var news = require('./json/news');
+
+app.use(favicon(__dirname + '/app/images/favicon.png'));
 
 app.use('/vendor', express.static('./bower_components'));
 app.use('/assets', express.static('./dist'));
@@ -21,15 +26,15 @@ app.get('/projects', function (req,res){
 });
 
 app.get('/partners', function (req,res){
-	res.send('partner page');
+	res.render('partners', {title: 'Waltt|Partners', partners: partners});
 });
 
 app.get('/news', function (req,res){
-	res.send('news page');
+	res.render('news', {title: 'Waltt|News', news: news});
 });
 
 app.get('/contact', function (req,res){
-	res.send('contact page');
+	res.render('contact', {title: 'Waltt|Contact'});
 });
 
 app.listen('4000', function(){

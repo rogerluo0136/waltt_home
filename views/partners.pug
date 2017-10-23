@@ -1,0 +1,22 @@
+extends ./partials/base.pug
+
+block content
+ 
+ .partner-container
+  .banner-partners
+   .container
+    .banner-text
+     h1= 'Our Partners' 
+
+  
+  .container
+   each partner in partners
+    .row
+     .project-box
+      .col-md-4.col-sm-12
+       img(src='assets/images/'+partner.file)
+      .col-md-8.col-sm-12
+       h2
+        |#{partner.name}
+       p
+        |#{partner.desc}
