@@ -3,22 +3,47 @@ extends ./partials/base.pug
 block content
  
  .container
-  .row
+  .row.contact-box
    .col-md-12.col-sm-12
     iframe(width="100%", height="425", frameborder="0", style="border:0", src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJGbtb5TQrK4gRjCEdJJIqlq4&key=AIzaSyDXnx-Cw1l8Czj47PJLaLU5F9OPOJ9sHpk", allowfullscreen)
 
-  .row
+  .row.contact-box
    .col-md-6.col-sm-12
     h1= 'Contact'
-    .text-left
-     p
-      |info@waltt.ca
-     p
-      |28 Fulton Way, Unit 200
-     p
-      |Richmond Hill, L4B 1J5
-     p
-      |Canada
-     p
-      |905-875-9851
+    h2
+     |info@waltt.ca
+    h2
+     |28 Fulton Way, Unit 200
+    h2
+     |Richmond Hill, L4B 1J5
+    h2 
+     |Canada
+    h2
+     |905-875-9851
+
    .col-md-6.col-sm-12
+    form.container(action='/contact', name='contactus', id='contactus', method='POST')
+     fieldset.form-group
+      .form-row
+       .col
+        label.col-form-label(for='name')
+        input.form-control.form-control-lg(name='name', type='text', value='', id='name', placeholder='Name')
+       .col
+        label.col-form-label(for='email')
+        input.form-control.form-control-lg(name='email', type='text', value='', id='email', placeholder='Email')
+      .form-row
+       .col
+        label.col-form-label(for='phone')
+        input.form-control.form-control-lg(name='phone', type='text', value='', id='phone', placeholder='Phone')
+      .form-row
+       .col
+        label.col-form-label(for='subject')
+        input.form-control.form-control-lg(name='subject', type='text', value='', id='subject', placeholder='Subject')
+      .form-row
+       .col
+        label.col-form-label(for='message')
+        textarea.form-control(name='message', rows='15', id='message', placeholder='Message')
+     button.btn.btn-primary.btn-block.btn-lg(type='submit', id='submit')= 'Submit'
+
+
+
