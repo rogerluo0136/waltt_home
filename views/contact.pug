@@ -6,6 +6,14 @@ block content
   .row.contact-box
    .col-md-12.col-sm-12
     iframe(width="100%", height="425", frameborder="0", style="border:0", src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJGbtb5TQrK4gRjCEdJJIqlq4&key=AIzaSyDXnx-Cw1l8Czj47PJLaLU5F9OPOJ9sHpk", allowfullscreen)
+ 
+  if(typeof msg !== 'undefined')
+   if(!!err)
+    .p-3.mb-2.bg-warning.text-white
+     |#{msg}
+   else
+    .p-3.mb-2.bg-success.text-white 
+     |#{msg}
 
   .row.contact-box
    .col-md-6.col-sm-12
@@ -44,6 +52,8 @@ block content
         label.col-form-label(for='message')
         textarea.form-control(name='message', rows='15', id='message', placeholder='Message')
      button.btn.btn-primary.btn-block.btn-lg(type='submit', id='submit')= 'Submit'
+
+
 
 
 
